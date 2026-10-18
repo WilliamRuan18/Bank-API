@@ -3,7 +3,6 @@ package br.com.william.bankapi.controller;
 import br.com.william.bankapi.dto.AtualizarContaDTO;
 import br.com.william.bankapi.dto.ContaRespostaDTO;
 import br.com.william.bankapi.dto.CriarContaDTO;
-import br.com.william.bankapi.entity.Conta;
 import br.com.william.bankapi.service.ContaService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
