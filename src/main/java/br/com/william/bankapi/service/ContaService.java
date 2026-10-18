@@ -1,6 +1,7 @@
 package br.com.william.bankapi.service;
 
 
+import br.com.william.bankapi.dto.AtualizarContaDTO;
 import br.com.william.bankapi.dto.ContaRespostaDTO;
 import br.com.william.bankapi.dto.CriarContaDTO;
 import br.com.william.bankapi.entity.Conta;
@@ -45,7 +46,7 @@ public class ContaService {
         return converterParaDTO(contaRepository.save(conta));
     }
 
-    public ContaRespostaDTO atualizarConta(Long id, CriarContaDTO dadosAtualizados) {
+    public ContaRespostaDTO atualizarConta(Long id, AtualizarContaDTO dadosAtualizados) {
         Conta conta = contaRepository.findById(id)
                 .orElseThrow(() -> new ContaNaoEncontradaException("Conta não encontrada com o ID: " + id));
 

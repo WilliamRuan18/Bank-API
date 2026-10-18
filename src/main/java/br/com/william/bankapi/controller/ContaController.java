@@ -1,5 +1,6 @@
 package br.com.william.bankapi.controller;
 
+import br.com.william.bankapi.dto.AtualizarContaDTO;
 import br.com.william.bankapi.dto.ContaRespostaDTO;
 import br.com.william.bankapi.dto.CriarContaDTO;
 import br.com.william.bankapi.entity.Conta;
@@ -35,8 +36,8 @@ public class ContaController {
     }
 
     @PutMapping("/{id}")
-    public ContaRespostaDTO atualizarConta(@PathVariable Long id, @Valid @RequestBody CriarContaDTO dadosDaConta) {
-        return contaService.atualizarConta(id, dadosDaConta);
+    public ContaRespostaDTO atualizarConta(@PathVariable Long id, @Valid @RequestBody AtualizarContaDTO dadosAtualizados) {
+        return contaService.atualizarConta(id, dadosAtualizados);
     }
 
     @DeleteMapping("/{id}")
